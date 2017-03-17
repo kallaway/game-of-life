@@ -1,0 +1,1 @@
+Components: board, cell, controls, settings, header, footer
