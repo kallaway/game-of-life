@@ -8,9 +8,22 @@ import Settings from './settings';
 import FooterGL from './footer-gl';
 
 class App extends React.Component {
+	constructor(props) {
+		super(props);
+		// should be aware of status of the game?
+		// should be aware if someone presses Clear?
+		// should be aware of which generation it is
+		// should be aware of current size of the board
+		// should be aware of current speed of the game
+		this.state = {
+			generation: 0,
+
+		}
+	}
+
 	render() {
 		return (
-			<div>
+			<div className="app-component">
 				<p>Light React Boilerplate</p>
 				<HeaderGL />
 				<Controls />
