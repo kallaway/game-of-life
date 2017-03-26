@@ -1,0 +1,78 @@
+/******* MAIN *******/
+/* Main colors for now: #7FF709 & #000 */
+/* might change green to blue - digital as in Tron */
+/* awake vs asleep */
+
+/* $green: #7FF709; */
+
+body {
+	font-size: 1.5em;
+	color: #7FF709;
+	background-color: #000;
+
+	/* temp */
+	text-align: center;
+}
+
+button {
+	border: 1px solid #7FF709;
+	font-size: 1em;
+	width: 120px;
+	color: #7FF709;
+	background-color: #000;
+	margin: 0 5px;
+}
+
+a {
+
+}
+
+/* maybe visited should not be colored in a different way at all */
+a:visited {
+	color: #38654b;
+}
+
+p {
+	margin: 10px auto;
+}
+
+/*** APP COMPONENT ***/
+
+
+
+/*** HEADER COMPONENT ***/
+
+
+/*** CONTROLS COMPONENT ***/
+
+
+/*** BOARD COMPONENT ***/
+.board-component {
+	border: 1px solid #CCC;
+	display: flex;
+	flex-direction: row;
+}
+
+/*** CELL COMPONENT ***/
+.cell-component {
+	height: 15px;
+	width: 15px;
+	/*** for testing purposes ***/
+	background-color: #777;
+	/*display: inline;*/
+	border: 1px solid #7FF709;
+}
+
+.asleep {
+	background-color: #CCC; /* if they are not active */
+}
+
+.awake {
+	background-color: #CCC;
+}
+
+/*** SETTINGS COMPONENT ***/
+
+
+
+/*** FOOTER COMPONENT ***/

@@ -4,16 +4,16 @@ var React = require('react');
 class Settings extends React.Component {
 	render() {
 		return (
-			<div class="settings-component">
+			<div className="settings-component">
 				<p>Settings</p>
-				<div class="board-sizes">
+				<div className="board-sizes">
 					<p>Board size:</p>
 					<button>Size: 50x30</button>
 					<button>Size: 70x50</button>
 					<button>Size: 100x80</button>
 				</div>
-				<div class="game-speeds">
-					<p>Board size:</p>
+				<div className="game-speeds">
+					<p>Game speed:</p>
 					<button>Slow</button>
 					<button>Medium</button>
 					<button>Fast</button>

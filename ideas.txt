@@ -1,1 +1,3 @@
-Components: board, cell, controls, settings, header, footer
+1) Components: board, cell, controls, settings, header, footer
+2) Do I need a CellRow component?
+3) How to set the state of certain cells to be awake and others to be asleep?

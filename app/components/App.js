@@ -17,7 +17,9 @@ class App extends React.Component {
 		// should be aware of current speed of the game
 		this.state = {
 			generation: 0,
-
+			rows: 70,
+			cols: 50,
+			testArr: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 		}
 	}
 
@@ -27,7 +29,7 @@ class App extends React.Component {
 				<p>Light React Boilerplate</p>
 				<HeaderGL />
 				<Controls />
-				<Board />
+				<Board rows={this.state.rows} cols={this.state.cols} testArr={this.state.testArr}/>
 				<Settings />
 				<FooterGL />
 			</div>
