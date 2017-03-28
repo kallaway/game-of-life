@@ -12,6 +12,8 @@ body {
 
 	/* temp */
 	text-align: center;
+
+
 }
 
 button {
@@ -21,6 +23,11 @@ button {
 	color: #7FF709;
 	background-color: #000;
 	margin: 0 5px;
+}
+
+button:active {
+	background-color: #7FF709;
+	color: #000;
 }
 
 a {
@@ -37,7 +44,12 @@ p {
 }
 
 /*** APP COMPONENT ***/
-
+.app-component {
+	display: flex;
+	/*justify-content: center;*/
+	align-items: center;
+	flex-direction: column;
+}
 
 
 /*** HEADER COMPONENT ***/
@@ -51,24 +63,27 @@ p {
 	border: 1px solid #CCC;
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
+	width: 600px;
 }
+
 
 /*** CELL COMPONENT ***/
 .cell-component {
-	height: 15px;
-	width: 15px;
+	height: 10px;
+	width: 10px;
 	/*** for testing purposes ***/
 	background-color: #777;
 	/*display: inline;*/
-	border: 1px solid #7FF709;
+	border: 1px solid #333333;
 }
 
 .asleep {
-	background-color: #CCC; /* if they are not active */
+	background-color: #000; /* if they are not active */
 }
 
 .awake {
-	background-color: #CCC;
+	background-color: #7FF709;
 }
 
 /*** SETTINGS COMPONENT ***/

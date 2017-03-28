@@ -2,6 +2,17 @@ var React = require('react');
 // var ReactDOM = require('react-dom');
 
 class Settings extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+
+	// setGameSpeed() {
+	//
+	// }
+	// handleClick(speed) {
+	// 	this.props.setSpeed(speed)
+	// }
+
 	render() {
 		return (
 			<div className="settings-component">
@@ -14,6 +25,7 @@ class Settings extends React.Component {
 				</div>
 				<div className="game-speeds">
 					<p>Game speed:</p>
+					{/* <button onClick={this.handleClick(100)}>Slow</button> */}
 					<button>Slow</button>
 					<button>Medium</button>
 					<button>Fast</button>
@@ -21,6 +33,11 @@ class Settings extends React.Component {
 			</div>
 		)
 	}
+}
+
+Settings.PropTypes = {
+	setSpeed: React.PropTypes.func.isRequired,
+	changeSize: React.PropTypes.func.isRequired
 }
 
 export default Settings;

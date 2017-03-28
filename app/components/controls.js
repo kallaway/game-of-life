@@ -2,14 +2,17 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 
 class Controls extends React.Component {
+	constructor(props) {
+		super(props);
+	}
 	render() {
 		return (
 			<div className="controls-component">
 				<p>Controls</p>
-				<button>Run</button>
-				<button>Pause</button>
-				<button>Clear</button>
-				<p>Generation: Number</p>
+				<button onClick={this.props.turnGameOn}>Run</button>
+				<button onClick={this.props.pauseGame}>Pause</button>
+				<button onClick={this.props.clearGame}>Clear</button>
+				<p>Generation: {this.props.generation}</p>
 			</div>
 		)
 	}

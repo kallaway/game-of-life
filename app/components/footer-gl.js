@@ -6,7 +6,7 @@ class FooterGL extends React.Component {
 		return (
 			<div className="footer-gl-component">
 				<p>Instructions</p>
-				<p>Feel free to add cells while it's running. The cells in light red are younger, dark red are older. Enjoy!</p>
+				<p>Feel free to add cells while it's running or when it's paused. Enjoy!</p>
 			</div>
 		)
 	}
