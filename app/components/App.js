@@ -37,6 +37,8 @@ class App extends React.Component {
 		this.pauseGame = this.pauseGame.bind(this);
 		this.clearGame = this.clearGame.bind(this);
 		this.changeCellState = this.changeCellState.bind(this);
+
+		this.setGameSpeed = this.setGameSpeed.bind(this);
 	}
 
 	componentWillMount() {
@@ -54,7 +56,8 @@ class App extends React.Component {
 		this.setState({
 			isGameOn: true
 		});
-		this.runOneCycle();
+		setTimeout(this.runOneCycle, 50); // find a better way to handle this.
+		//this.runOneCycle(); // this runs before the state has the time to adapt
 	}
 
 	pauseGame() {
@@ -77,7 +80,7 @@ class App extends React.Component {
 		// make cells decide
 		let cells = this.state.cells;
 		// let oldCellsState
-		let vStep = 50; //change to somethingl like this.rows;
+		let vStep = 50; //change to something like this.rows;
 		let hStep = 1;
 
 		let newCellsState = [];
@@ -131,7 +134,8 @@ class App extends React.Component {
 		// update Generation
 		// after a delay
 		if (this.state.isGameOn) {
-			setTimeout(this.runOneCycle, 50);
+			console.log("the cycle repeats");
+			setTimeout(this.runOneCycle, this.state.speed);
 		}
 		// setTimeout(this.runOneCycle, this.state.speed).bind(this);
 	}
@@ -149,15 +153,15 @@ class App extends React.Component {
 		console.log(this.state.cells);
 	}
 
-	runCellLifecycle() {
-
-	}
-
+	// runCellLifecycle() {
+	//
+	// }
 
 	setGameSpeed(speed) {
 		this.setState({
 			speed: speed
 		})
+		console.log("changing speed gets run");
 	}
 
 	changeBoardSize(rows, cols) {
@@ -174,6 +178,12 @@ class App extends React.Component {
 		this.setState({
 			cells: cellsToModify
 		})
+	}
+
+	setGameSpeed(speed) {
+		this.setState({
+			speed: speed
+		});
 	}
 
 	render() {
