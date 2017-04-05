@@ -1,93 +1,67 @@
 /******* MAIN *******/
-/* Main colors for now: #7FF709 & #000 */
+/* Main colors for now: #239A3B & #FFF */
 /* might change green to blue - digital as in Tron */
 /* awake vs asleep */
-
-/* $green: #7FF709; */
-
 body {
-	font-size: 1.5em;
-	color: #7FF709;
-	background-color: #000;
-
-	/* temp */
-	text-align: center;
-
-
-}
+  font-size: 1.5em;
+  color: #24292E;
+  background-color: #FFF;
+  /* temp */
+  text-align: center; }
 
 button {
-	border: 1px solid #7FF709;
-	font-size: 1em;
-	width: 120px;
-	color: #7FF709;
-	background-color: #000;
-	margin: 0 5px;
-}
+  border: 1px solid #239A3B;
+  font-size: 0.7em;
+  width: 120px;
+  color: #24292E;
+  background-color: #F3F6F8;
+  margin: 0 5px; }
 
 button:active {
-	background-color: #7FF709;
-	color: #000;
-}
-
-a {
-
-}
+  background-color: #239A3B;
+  color: #FFF; }
 
 /* maybe visited should not be colored in a different way at all */
 a:visited {
-	color: #38654b;
-}
+  color: #38654b; }
 
 p {
-	margin: 10px auto;
-}
+  margin: 10px auto; }
 
 /*** APP COMPONENT ***/
 .app-component {
-	display: flex;
-	/*justify-content: center;*/
-	align-items: center;
-	flex-direction: column;
-}
-
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
+  flex-direction: column; }
 
 /*** HEADER COMPONENT ***/
-
-
 /*** CONTROLS COMPONENT ***/
-
-
 /*** BOARD COMPONENT ***/
 .board-component {
-	border: 1px solid #CCC;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	width: 600px;
-}
-
+  border: 1px solid #D1D5DA;
+  padding: 5px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 600px; }
 
 /*** CELL COMPONENT ***/
 .cell-component {
-	height: 10px;
-	width: 10px;
-	/*** for testing purposes ***/
-	background-color: #777;
-	/*display: inline;*/
-	border: 1px solid #333333;
-}
+  height: 10px;
+  width: 10px;
+  /*** for testing purposes ***/
+  background-color: #777;
+  /*display: inline;*/
+  border: 1px solid #FFF; }
 
 .asleep {
-	background-color: #000; /* if they are not active */
-}
+  background-color: #EBEDF0;
+  /* if they are not active */ }
 
 .awake {
-	background-color: #7FF709;
-}
+  background-color: #239A3B; }
 
 /*** SETTINGS COMPONENT ***/
-
-
-
 /*** FOOTER COMPONENT ***/

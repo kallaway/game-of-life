@@ -8,7 +8,6 @@ class Controls extends React.Component {
 	render() {
 		return (
 			<div className="controls-component">
-				<p>Controls</p>
 				<button onClick={this.props.turnGameOn}>Run</button>
 				<button onClick={this.props.pauseGame}>Pause</button>
 				<button onClick={this.props.clearGame}>Clear</button>

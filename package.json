@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+		"build-css": "node-sass app/css/ -o app/css/",
+		"watch-css": "npm run build-css && node-sass app/css/ -o app/css/ --watch --recursive"
   },
   "author": "",
   "license": "ISC",

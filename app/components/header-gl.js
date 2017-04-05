@@ -7,8 +7,9 @@ const HeaderGL = () => {
 	return (
 		<div className="header-gl">
 			<a target="_blank" href="https://www.math.cornell.edu/~lipa/mec/lesson6.html">
-				ReactJS Game of Life (click to learn more)
+				ReactJS Game of Github (click to learn more)
 			</a>
+			<p>Add something fun here -> about person's progress on GitHub</p>
 		</div>
 	);
 }

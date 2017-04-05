@@ -37,7 +37,6 @@ class App extends React.Component {
 		this.pauseGame = this.pauseGame.bind(this);
 		this.clearGame = this.clearGame.bind(this);
 		this.changeCellState = this.changeCellState.bind(this);
-
 		this.setGameSpeed = this.setGameSpeed.bind(this);
 	}
 
@@ -122,7 +121,6 @@ class App extends React.Component {
 				default:
 			}
 
-
 			newCellsState.push(cellState);
 		});
 
@@ -137,7 +135,6 @@ class App extends React.Component {
 			console.log("the cycle repeats");
 			setTimeout(this.runOneCycle, this.state.speed);
 		}
-		// setTimeout(this.runOneCycle, this.state.speed).bind(this);
 	}
 
 	// as soon as it loads it should start playing
@@ -152,10 +149,6 @@ class App extends React.Component {
 		console.log('CELLS!');
 		console.log(this.state.cells);
 	}
-
-	// runCellLifecycle() {
-	//
-	// }
 
 	setGameSpeed(speed) {
 		this.setState({
