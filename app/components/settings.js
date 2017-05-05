@@ -14,16 +14,16 @@ class Settings extends React.Component {
 				<div className="board-sizes settings-row">
 					<p>Board size:</p>
 
-					<button onClick={() => this.props.changeSize(50, 30) }>Size: 50x30</button>
-					<button onClick={() => this.props.changeSize(70, 50) }>Size: 70x50</button>
-					<button onClick={() => this.props.changeSize(100, 80) }>Size: 100x80</button>
+					<button onClick={() => this.props.changeSize(50, 30) }>50x30</button>
+					<button onClick={() => this.props.changeSize(70, 50) }>70x50</button>
+					<button onClick={() => this.props.changeSize(100, 80) }>100x80</button>
 				</div>
 				<div className="game-speeds settings-row">
-					<p>Game speed:</p>
+					<p>Speed:</p>
 					{/* <button onClick={this.handleClick(100)}>Slow</button> */}
-					<button onClick={() => { this.props.setSpeed(250) }}>Slow</button>
-					<button onClick={() => { this.props.setSpeed(50) }}>Medium</button>
-					<button onClick={() => { this.props.setSpeed(10) }}>Fast</button>
+					<button onClick={() => { this.props.setSpeed(250) }}>Thrusters</button>
+					<button onClick={() => { this.props.setSpeed(50) }}>Impulse</button>
+					<button onClick={() => { this.props.setSpeed(10) }}>Warp</button>
 				</div>
 			</div>
 		)

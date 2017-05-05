@@ -95,7 +95,12 @@ p {
 }
 
 .board-50-30 {
+	width: 500px;
 
+	.cell-component {
+		height: 15px;
+		width: 15px;
+	}
 }
 
 .board-70-50 {
@@ -108,7 +113,12 @@ p {
 }
 
 .board-100-80 {
+	width: 900px;
 
+	.cell-component {
+		height: 5px;
+		width: 5px;
+	}
 }
 //
 // .cells-50-30 {

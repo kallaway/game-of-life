@@ -62,11 +62,26 @@ p {
   /*display: inline;*/
   border: 1px solid #FFF; }
 
+.board-50-30 {
+  width: 500px; }
+
+.board-50-30 .cell-component {
+  height: 15px;
+  width: 15px; }
+
 .board-70-50 {
   width: 600px; }
-  .board-70-50 .cell-component {
-    height: 10px;
-    width: 10px; }
+
+.board-70-50 .cell-component {
+  height: 10px;
+  width: 10px; }
+
+.board-100-80 {
+  width: 900px; }
+
+.board-100-80 .cell-component {
+  height: 5px;
+  width: 5px; }
 
 .asleep {
   background-color: #EBEDF0; }

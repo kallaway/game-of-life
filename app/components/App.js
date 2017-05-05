@@ -73,14 +73,6 @@ class App extends React.Component {
 		});
 	}
 
-	setBoardStyle(currentClass) {
-		let boardEl = document.getElementById('board-component');
-		// boardClass
-		boardEl.classList.remove()
-		boardEl.classList.add(currentClass);
-
-	}
-
 	clearGame() {
 		// make sure to set all the cells to false;
 		this.setState({
@@ -180,13 +172,40 @@ class App extends React.Component {
 		switch (rows) {
 			case 50:
 				classToSet = 'cells-50-30';
+				break;
+
+			case 70:
+				classToSet = 'board-70-50';
+				break;
+
+			case 100:
+				classToSet = 'board-100-80';
+				break;
+
+			default:
+				classToSet = 'cells-70-30';
 		}
 
+		this.setBoardStyle(classToSet);
 
 		// remove previously created cells
-
+		// somehow
 		// check?
 		this.generateCells();
+	}
+
+	setBoardStyle(currentClass) {
+		let boardEl = document.getElementById('board-component');
+
+		// boardClass
+		boardEl.classList.remove(this.state.boardClass);
+		boardEl.classList.add(currentClass);
+
+		// change the state:
+		this.setState({
+			boardState: currentClass
+		});
+
 	}
 
 	changeCellState(index) {
