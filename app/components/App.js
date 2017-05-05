@@ -1,3 +1,7 @@
+// should be able to clear the board
+// fix the bug on stop
+//
+
 var React = require('react');
 
 import HeaderGL from './header-gl';
@@ -23,6 +27,8 @@ class App extends React.Component {
 			rows: 30,
 			cols: 50,
 			testArr: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+			boardClass: 'board-70-50',
+			cellClass: 'cells-70-50',
 			speed: 50,
 			cells: []
 		}
@@ -38,6 +44,7 @@ class App extends React.Component {
 		this.clearGame = this.clearGame.bind(this);
 		this.changeCellState = this.changeCellState.bind(this);
 		this.setGameSpeed = this.setGameSpeed.bind(this);
+		this.setBoardStyle = this.setBoardStyle.bind(this);
 	}
 
 	componentWillMount() {
@@ -64,6 +71,14 @@ class App extends React.Component {
 		this.setState({
 			isGameOn: false,
 		});
+	}
+
+	setBoardStyle(currentClass) {
+		let boardEl = document.getElementById('board-component');
+		// boardClass
+		boardEl.classList.remove()
+		boardEl.classList.add(currentClass);
+
 	}
 
 	clearGame() {
@@ -128,7 +143,6 @@ class App extends React.Component {
 			cells: newCellsState
 		})
 
-		// rerender?
 		// update Generation
 		// after a delay
 		if (this.state.isGameOn) {
@@ -143,7 +157,6 @@ class App extends React.Component {
 
 		for (var i = 0, isAwakeVar; i < overall; i++) {
 			isAwakeVar = Boolean(Math.round(Math.random()));
-			// console.log('This cell is ON? ' + isAwakeVar);
 			this.state.cells.push(isAwakeVar);
 		}
 		console.log('CELLS!');
@@ -158,11 +171,22 @@ class App extends React.Component {
 	}
 
 	changeBoardSize(rows, cols) {
-
 		this.setState({
 			rows: rows,
 			cols: cols
-		})
+		});
+
+		var classToSet;
+		switch (rows) {
+			case 50:
+				classToSet = 'cells-50-30';
+		}
+
+
+		// remove previously created cells
+
+		// check?
+		this.generateCells();
 	}
 
 	changeCellState(index) {
@@ -190,7 +214,7 @@ class App extends React.Component {
 					pauseGame={this.pauseGame}
 					clearGame={this.clearGame}
 				/>
-				<div className="board-component">
+				<div id="board-component" className={this.state.boardClass}>
 					{
 						this.state.cells.map((isCellAwake, index) => {
 							return <Cell

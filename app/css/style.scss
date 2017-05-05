@@ -3,11 +3,18 @@
 /* might change green to blue - digital as in Tron */
 /* awake vs asleep */
 
+
+$grey-border: #A1A6AA;
 $green: #239A3B;
+$red: red;
+$text-color-grey: #6A737D; // change var name
+
+$cell-asleep-color: #EBEDF0;
+$awake-green-color: #239A3B;
 
 body {
 	font-size: 1.5em;
-	color: #24292E;
+	color: $text-color-grey;
 	background-color: #FFF;
 
 	/* temp */
@@ -15,7 +22,8 @@ body {
 }
 
 button {
-	border: 1px solid $green;
+	border: 1px solid $grey-border;
+	border-radius: 5px;
 	font-size: 0.7em;
 	width: 120px;
 	color: #24292E;
@@ -33,7 +41,7 @@ button:hover {
 }
 
 a {
-
+	color: $awake-green-color;
 }
 
 /* maybe visited should not be colored in a different way at all */
@@ -60,37 +68,94 @@ p {
 
 
 /*** BOARD COMPONENT ***/
-.board-component {
+#board-component {
 	border: 1px solid #D1D5DA;
 	padding: 5px;
 	border-radius: 3px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	width: 600px;
+	// width: 600px;
 }
-
 
 /*** CELL COMPONENT ***/
 .cell-component {
-	height: 10px;
-	width: 10px;
+	height: 10px; // TEMP
+	width: 10px; // TEMP
 	/*** for testing purposes ***/
 	background-color: #777;
 	/*display: inline;*/
 	border: 1px solid #FFF;
 }
 
+.cells-github-calendar {
+	// overall 365
+	//height: something
+	// change where it wraps?
+}
+
+.board-50-30 {
+
+}
+
+.board-70-50 {
+	width: 600px;
+
+	.cell-component {
+		height: 10px;
+		width: 10px;
+	}
+}
+
+.board-100-80 {
+
+}
+//
+// .cells-50-30 {
+// 	height: 10px;
+// 	width: 10px;
+// }
+//
+// .cells-70-50 {
+// 	height: 15px;
+// 	width: 15px;
+// }
+//
+// .cells-100-80 {
+// 	height: 8px;
+// 	width: 8px;
+// }
+
 .asleep {
-	background-color: #EBEDF0; /* if they are not active */
+	background-color: $cell-asleep-color;
 }
 
 .awake {
-	background-color: #239A3B;
+	background-color: $awake-green-color;
 }
 
 /*** SETTINGS COMPONENT ***/
 
+.settings-row {
+	display: flex;
+	flex-direction: row;
+	margin-top: 0.3em;
+	align-items: center;
+}
 
+.settings-row button {
+	height: 2em;
+}
 
 /*** FOOTER COMPONENT ***/
+
+
+
+
+
+
+
+
+
+
+/* CSS END */

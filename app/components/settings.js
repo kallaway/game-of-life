@@ -6,26 +6,19 @@ class Settings extends React.Component {
 		super(props);
 	}
 
-	// setGameSpeed() {
-	//
-	// }
-	// handleClick(speed) {
-	// 	this.props.setSpeed(speed)
-	// }
-	changeSpeed(speed) {
-		this.props.setSpeed(speed);
-	}
+	//  73 5 = 365
 
 	render() {
 		return (
 			<div className="settings-component">
-				<div className="board-sizes">
+				<div className="board-sizes settings-row">
 					<p>Board size:</p>
-					<button>Size: 50x30</button>
-					<button>Size: 70x50</button>
-					<button>Size: 100x80</button>
+
+					<button onClick={() => this.props.changeSize(50, 30) }>Size: 50x30</button>
+					<button onClick={() => this.props.changeSize(70, 50) }>Size: 70x50</button>
+					<button onClick={() => this.props.changeSize(100, 80) }>Size: 100x80</button>
 				</div>
-				<div className="game-speeds">
+				<div className="game-speeds settings-row">
 					<p>Game speed:</p>
 					{/* <button onClick={this.handleClick(100)}>Slow</button> */}
 					<button onClick={() => { this.props.setSpeed(250) }}>Slow</button>

@@ -9,7 +9,7 @@ const HeaderGL = () => {
 			<a target="_blank" href="https://www.math.cornell.edu/~lipa/mec/lesson6.html">
 				ReactJS Game of Github (click to learn more)
 			</a>
-			<p>Add something fun here -> about person's progress on GitHub</p>
+			<p>Add something fun here -> about persons progress on GitHub</p>
 		</div>
 	);
 }
